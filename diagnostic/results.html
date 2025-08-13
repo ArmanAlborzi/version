@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Diagnostic Results — Olympiad Prep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="/"><div class="brand-logo"></div><h1>Olympiad Prep</h1></a>
+      <nav class="nav">
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/timeline/">Timeline</a>
+        <a href="/tutors/">Tutors</a>
+      </nav>
+    </header>
+
+    <section id="diagResults"></section>
+
+    <footer class="footer">© <span id="y"></span> Olympiad Prep.</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

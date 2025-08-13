@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Diagnostic — Olympiad Prep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="/"><div class="brand-logo"></div><h1>Olympiad Prep</h1></a>
+      <nav class="nav">
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/timeline/">Timeline</a>
+        <a href="/tutors/">Tutors</a>
+      </nav>
+    </header>
+
+    <section class="card form">
+      <h2>Quick Diagnostic</h2>
+      <p class="notice">Set your goal, time budget, and date. 15 placeholders for questions you’ll add later.</p>
+
+      <form id="diagnosticForm">
+        <div class="field">
+          <label>Your primary goal</label>
+          <div class="radio-row">
+            <label><input type="radio" name="goal" value="amc" required> AMC</label>
+            <label><input type="radio" name="goal" value="aime" required> AIME</label>
+            <label><input type="radio" name="goal" value="usamo" required> USAMO</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="minutes">Minutes per day</label>
+          <input id="minutes" name="minutes" type="number" min="5" step="5" placeholder="e.g., 45" required>
+        </div>
+
+        <div class="field">
+          <label for="test_date">Target test date</label>
+          <input id="test_date" name="test_date" type="date" required>
+        </div>
+
+        <hr style="border: none; border-top:1px solid rgba(148,163,184,0.2); margin:18px 0">
+
+        <!-- 15 placeholder questions -->
+        <div class="grid">
+          <!-- Keep them simple now; you’ll replace later -->
+          <div class="tile card"><div class="tile"><label>Q1</label><input type="text" name="q1" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q2</label><input type="text" name="q2" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q3</label><input type="text" name="q3" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q4</label><input type="text" name="q4" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q5</label><input type="text" name="q5" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q6</label><input type="text" name="q6" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q7</label><input type="text" name="q7" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q8</label><input type="text" name="q8" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q9</label><input type="text" name="q9" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q10</label><input type="text" name="q10" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q11</label><input type="text" name="q11" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q12</label><input type="text" name="q12" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q13</label><input type="text" name="q13" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q14</label><input type="text" name="q14" placeholder="Placeholder"></div></div>
+          <div class="tile card"><div class="tile"><label>Q15</label><input type="text" name="q15" placeholder="Placeholder"></div></div>
+        </div>
+
+        <div style="margin-top:18px">
+          <button class="btn" type="submit">Save & Continue</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Olympiad Prep.</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

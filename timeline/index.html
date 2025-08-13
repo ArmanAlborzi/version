@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Timeline — Olympiad Prep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="/"><div class="brand-logo"></div><h1>Olympiad Prep</h1></a>
+      <nav class="nav">
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/timeline/">Timeline</a>
+        <a href="/tutors/">Tutors</a>
+      </nav>
+    </header>
+
+    <section class="card form">
+      <h2>Your Timeline (Placeholder)</h2>
+      <p class="notice">This page will generate a study plan from your diagnostic. For now, it simply acknowledges your inputs.</p>
+      <div id="tl"></div>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Olympiad Prep.</footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    (function(){
+      const data = JSON.parse(localStorage.getItem('diagnostic') || '{}');
+      const el = document.getElementById('tl');
+      const goal = (data.goal || '').toUpperCase();
+      const minutes = data.minutes || '—';
+      const date = data.test_date || '—';
+      el.innerHTML = `
+        <div class="grid">
+          <div class="tile card"><div class="tile"><h3>Goal</h3><p>${goal || '(set in diagnostic)'}</p></div></div>
+          <div class="tile card"><div class="tile"><h3>Minutes/day</h3><p>${minutes}</p></div></div>
+          <div class="tile card"><div class="tile"><h3>Test date</h3><p>${date}</p></div></div>
+        </div>
+        <p class="notice" style="margin-top:16px">Coming soon: auto-scheduled practice blocks, spaced review, and problem sets aligned to your goal.</p>
+      `;
+    })();
+  </script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

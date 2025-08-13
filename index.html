@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Olympiad Prep — Math (AMC • AIME • USAMO)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clean, fast Olympiad prep portal with AoPS search, diagnostic, timeline, and tutor requests.">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="/">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <h1>Olympiad Prep</h1>
+      </a>
+      <nav class="nav">
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/timeline/">Timeline</a>
+        <a href="/tutors/">Tutors</a>
+      </nav>
+    </header>
+
+    <section class="hero card">
+      <h2>Accelerate your AMC, AIME, and USAMO prep.</h2>
+      <p>Search AoPS instantly, run a quick diagnostic, and get a tailored plan.</p>
+
+      <form id="searchForm" class="search" autocomplete="off" role="search" aria-label="AoPS Search">
+        <input id="q" type="text" placeholder='Try: "2022 AMC 12B Problem 3" or "AIME II 2015 #7"' aria-label="Search query">
+        <button type="submit">Search AoPS</button>
+      </form>
+      <div id="searchMsg" class="notice" style="margin-top:8px"></div>
+
+      <div class="grid">
+        <div class="tile card">
+          <div class="tile">
+            <h3>Smart AoPS Search</h3>
+            <p>Flexible parsing of order/format sends you to the exact problem page.</p>
+          </div>
+        </div>
+        <div class="tile card">
+          <div class="tile">
+            <h3>Diagnostic</h3>
+            <p>15-question baseline + your goal, daily minutes, and test date.</p>
+          </div>
+        </div>
+        <div class="tile card">
+          <div class="tile">
+            <h3>Timeline</h3>
+            <p>Auto-tailored timeline (placeholder now) built from your diagnostic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> Olympiad Prep. Math first; more subjects soon.
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
