@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tutors — Olympiad Prep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="/"><div class="brand-logo"></div><h1>Olympiad Prep</h1></a>
+      <nav class="nav">
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/timeline/">Timeline</a>
+        <a href="/tutors/">Tutors</a>
+      </nav>
+    </header>
+
+    <section class="card form">
+      <h2>Request a Tutor</h2>
+      <p class="notice">Tell us what you need. We’ll follow up via email. (Stored locally for now; wiring to email or backend can be added later.)</p>
+
+      <form id="tutorForm">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Full name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="level">Level</label>
+          <select id="level" name="level" required>
+            <option value="">Select…</option>
+            <option>AMC 10</option>
+            <option>AMC 12</option>
+            <option>AIME</option>
+            <option>USAMO</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Availability, goals, past scores, etc."></textarea>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+      <div id="tutorStatus" class="notice" style="margin-top:10px"></div>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Olympiad Prep.</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
